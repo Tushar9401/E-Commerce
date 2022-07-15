@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="p-4 m-4">
+        <div class="col-lg-4 mx-auto border pt-4 p-4 m-4 "> 
+            <h3 class="alert alert-light border rounded"> Register Your Complain</h3>
+            <!-- <form action="" method="POST">
+                 -->
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="">Email</label>
+                <input required type="email" 
+                name="email" id="" value="{{values.email}}"
+              class="form-control form-control-sm" placeholder="example@gmail.com" aria-describedby="helpId">
+              </div>
+
+             <!--password-->
+             <div class="form-group pt-3">
+                <label for="">OrderId</label>
+                <input type="orderId" 
+                name="orderId" id=""
+              class="form-control form-control-sm" placeholder="1234556" aria-describedby="helpId">
+              </div>
+     
+
+  <div class="form-group mx-auto pt-3">
+    <input  class ="btn btn-sm btn-info m col-lg-6" button onclick="myFunction()" type="submit" value="Register Complain">
+    <p id="demo"></p>
+</div>
+<script>
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "Thank YOU We will get back to You Soon!!";
+    }
+    </script>
+
+
+{% endblock %}
